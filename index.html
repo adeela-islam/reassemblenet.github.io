@@ -95,12 +95,12 @@
           </div>
 
           <div class="is-size-3 publication-authors">
-  <span class="author-block">
-    <a href="https://iccv.thecvf.com/Conferences/2025" target="_blank" style="color: black !important; text-decoration: none !important; font-size: 1.25rem !important;">
-      International Conference on Computer Vision (ICCV), 2025
-    </a>
-  </span>
-</div>
+      <span class="author-block">
+        <a href="https://iccv.thecvf.com/Conferences/2025" target="_blank" style="color: black !important; text-decoration: none !important; font-size: 1.25rem !important;">
+          International Conference on Computer Vision (ICCV), 2025
+        </a>
+      </span>
+    </div>
 
 
 
@@ -225,6 +225,22 @@ and 86% for RMSE Rotation and Translation, respectively.
       </div>
     </div>
     <!--/ Paper video. -->
+
+    <!-- Method Section -->
+    <div class="columns is-centered has-text-centered" style="margin-top: 3rem;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+          <figure>
+            <img src="static/images/method.png" alt="Method diagram" style="width: 100%; max-width: 800px;">
+              <figcaption style="margin-top: 0.5rem; font-size: 1rem; color: #555;">Framework of our proposed method. We begin by extracting keypoints from the input pieces, followed by computing global and local texture features alongside geometric features. Using the geometric features and keypoint coordinates, we then select the most relevant <i>k</i> keypoints. To model the reassembly process, we employ a Diffusion Probabilistic Model, formulating a Markov chain that gradually injects noise into the keypoints’ positions and orientations. At timestep <i>t = 0</i>, the pieces are correctly aligned, whereas at timestep <i>t = T</i>, their keypoints are randomly translated and rotated (note that for visualization purposes, we compute the average translation and rotation of keypoints within each piece at every step in the chain). At each timestep <i>t</i>, our attention module processes the keypoints—incorporating their coordinates, orientations, and extracted features—to predict a less noisy version of their positions and orientations, <i>{X̂<sub>t−1</sub><sup>m</sup>}</i>, iteratively refining them toward the correct configuration.
+              </figcaption>
+          </figure>
+    </div>
+        </div>
+            <!--/ Method Section -->
+
+
+
   </div>
 </section>
 
