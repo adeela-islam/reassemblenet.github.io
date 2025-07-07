@@ -236,31 +236,25 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            The task of reassembly is a significant challenge across multiple domains, including archaeology, genomics, and molecular docking, requiring the precise placement and orientation of elements to reconstruct an original structure.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            
+In this work, we address key limitations in state-of-the-art
+Deep Learning methods for reassembly, namely i) scalability; ii) multimodality; and iii) real-world applicability:
+beyond square or simple geometric shapes, realistic and
+complex erosion, or other real-world problems. We propose ReassembleNet, a method that reduces complexity by
+representing each input piece as a set of contour keypoints
+and learning to select the most informative ones by Graph
+Neural Networks pooling inspired techniques. 
+
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            ReassembleNet effectively lowers computational complexity while
+enabling the integration of features from multiple modalities, including both geometric and texture data. Further enhanced through pretraining on a semi-synthetic dataset. We
+then apply diffusion-based pose estimation to recover the
+original structure. We improve on prior methods by 55%
+and 86% for RMSE Rotation and Translation, respectively.
           </p>
         </div>
       </div>
@@ -272,7 +266,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+          <iframe src="https://youtu.be/cmmKuJalGWs"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -447,16 +441,10 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            This webpage is built with the template from <a
+                  href="https://github.com/nerfies/nerfies.github.io" target="_blank">NeRFies</a>
+            with interactive videos code from <a
+                  href="https://shangchenzhou.com/projects/ProPainter/">ProPainter</a>. We sincerely thank <a href="https://keunhong.com/" target="_blank">Keunhong Park</a> for developing and open-sourcing this template.
           </p>
         </div>
       </div>
